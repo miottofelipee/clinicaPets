@@ -87,7 +87,7 @@ function renderizarConteudo() {
                 <p>Tutor: ${pet.tutor}</p>
                 <p>Nome do Pet: ${pet.nomepet}</p>
                 <p>Especie: ${pet.especie}</p>
-                <p>Nascimento de seu Pet: ${pet.data}</p>
+                <p>Nascimento de seu Pet: ${dateinPTBR(pet.data)}</p>
                 <p>Idade: ${pet.age}</p>
             </div>
        `;
@@ -113,4 +113,8 @@ function cleaerFields() {
     document.getElementById("especie").value = "";
     document.getElementById("foto").value = "";
     document.getElementById("data").value = "";
+}
+
+function dateinPTBR(date){
+    return date.split('-').reverse().join('/')
 }
