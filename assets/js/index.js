@@ -16,7 +16,8 @@ function comporPet() {
     let data = document.getElementById("data").value;
     const pet = new Pet(tutor, nomepet, especie, foto, data);
     listadePet.add(pet);
-    renderizarConteudo()
+    console.log(pet);
+    renderizarConteudo();
 }
 
 class bibliotecaPet {
@@ -73,13 +74,13 @@ const listadePet = new bibliotecaPet();
 function renderizarConteudo() {
     const listaHTML = document.getElementById('petscadastrados');
     listaHTML.innerHTML = "";
-    let arraypet = bibliotecaJogos.listaJogosArray;
+    let arraypet = listadePet.bibliotecaPet;
     console.log(arraypet);
-    array.forEach(pet => {
+    arraypet.forEach(pet => {
         const petdiv = `
             <div class='jogoDetalhe'>
                 <h2>Tutor: ${pet.tutor}</h2>
-                <p>Nome do Pet: R$${pet.nomepet}</p>
+                <p>Nome do Pet: ${pet.nomepet}</p>
                 <p>Especie: ${pet.especie}</p>
                 <img src="${pet.foto}">
                 <p>Nascimento de seu Pet: ${pet.data}</p>
