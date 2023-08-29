@@ -83,10 +83,10 @@ function renderizarConteudo() {
     arraypet.forEach(pet => {
         const petdiv = `
             <div class='pet-card'>
-                <h2>Tutor: ${pet.tutor}</h2>
+                <img id="imgtam" src="${pet.foto}">
+                <p>Tutor: ${pet.tutor}</p>
                 <p>Nome do Pet: ${pet.nomepet}</p>
                 <p>Especie: ${pet.especie}</p>
-                <img src="${pet.foto}">
                 <p>Nascimento de seu Pet: ${pet.data}</p>
                 <p>Idade: ${pet.age}</p>
             </div>

@@ -60,3 +60,27 @@ body{
     color: white;
 }
 
+#pet-container{
+    background-color: white;
+    text-align: center;
+    margin-top: 60px;
+    border-radius: 8px;
+    height: 250px;
+    width: 400px;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    margin-left: 382px;
+    padding: 10px;
+}
+
+#divdoinput{
+    flex-direction: column;
+    display: flex;
+    padding: 15px;
+}
+
+#imgtam{
+    width: 90px;
+    height: 110px;
+}
