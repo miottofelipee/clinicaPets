@@ -1,46 +1,47 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="assets/css/index.css">
     <title>Pets</title>
 </head>
+
 <body>
     <header>
-        <h1>Clinica Veterinária</h1>
-        <p>Cadastro</p>
-        <p>Exibição</p>
+        <h1>Clinica Veterinária 🐕</h1>
+        <button class="botaolegal" onclick="showRegister()">Cadasrto 📂</button>
+        <button class="botaolegal" onclick="showListpet()">Exibição 📋</button>
     </header>
 
     <div id="divmaior">
         <h1>Cadastro de Pets</h1>
-    </div>
+        <div id="divdoinput">
+            <label for="tutor">Tutor </label>
+            <input type="text" id="tutor" class="inputs">
 
-    <div id="divinput">
-        <label for="tutor">Tutor</label>
-        <input type="text" id="tutor">
+            <label for="nomepet">Nome do Pet </label>
+            <input type="text" id="nomepet" class="inputs">
 
-        <label for="nomepet">Nome do Pet</label>
-        <input type="text" id="nomepet">
+            <label for="especie">Espécie </label>
+            <input type="text" id="especie" class="inputs">
 
-        <label for="especie">Espécie</label>
-        <input type="text" id="especie">
+            <label for="foto">Fotinha </label>
+            <input type="text" id="foto" class="inputs">
 
-        <label for="foto">Fotinha</label>
-        <input type="text" id="foto">
-
-        <label for="data">Nascimento do Pet</label>
-        <input type="date" id="data">
-        
+            <label for="data">Nascimento do Pet </label>
+            <input type="date" id="data" class="inputs">
+        </div>
         <p id="msg"></p>
 
         <button type="button" id="cadastrar" onclick="comporPet()">Cadastrar Pet</button>
 
-        <div id="petscadastrados">
-
-        </div>
     </div>
+
+    <div id="pet-container" class="hidden"></div>
+
     <script src="assets/js/index.js"></script>
 </body>
+
 </html>
