@@ -3,9 +3,40 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/index.css">
     <title>Pets</title>
 </head>
 <body>
-    
+    <header>
+        <h1>Clinica Veterinária</h1>
+        <p>Cadastro</p>
+        <p>Exibição</p>
+    </header>
+
+    <div id="divmaior">
+        <h1>Cadastro de Pets</h1>
+    </div>
+
+    <div id="divinput">
+        <label for="tutor">Tutor</label>
+        <input type="text" id="tutor">
+
+        <label for="nomepet">Nome do Pet</label>
+        <input type="text" id="nomepet">
+
+        <label for="especie">Espécie</label>
+        <input type="text" id="especie">
+
+        <label for="foto">Fotinha</label>
+        <input type="text" id="foto">
+
+        <label for="data">Nascimento do Pet</label>
+        <input type="date" id="data">
+        
+        <p id="msg"></p>
+
+        <button type="button" id="cadastrar" onclick="comporPet()">Cadastrar Pet</button>
+    </div>
+    <script src="assets/js/index.js"></script>
 </body>
 </html>
