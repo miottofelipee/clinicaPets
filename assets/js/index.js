@@ -33,6 +33,7 @@ class bibliotecaPet {
             envieMsg("Preecha todos os campos", "error")
         } else {
             this.bibliotecaPet.push(parametro);
+            cleaerFields();
             envieMsg("Seu pet fofinho foi cadastrado!", "sucesso")
         }
     }
@@ -104,4 +105,12 @@ function showListpet() {
     document.getElementById("divmaior").classList.add("hidden");
     document.getElementById("pet-container").classList.remove("hidden");
     document.getElementById("pet-card").classList.remove("hidden");
+}
+
+function cleaerFields() {
+    document.getElementById("tutor").value = "";
+    document.getElementById("nomepet").value = "";
+    document.getElementById("especie").value = "";
+    document.getElementById("foto").value = "";
+    document.getElementById("data").value = "";
 }
