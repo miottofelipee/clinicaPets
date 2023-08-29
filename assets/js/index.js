@@ -31,7 +31,9 @@ class bibliotecaPet {
     add(parametro) {
         if (verificacaoInputs()) {
             envieMsg("Preecha todos os campos", "error")
-        } else {
+        } else if (!isURLValida(parametro.foto)) {
+        envieMsg("URL inválida", "erro")
+        }else{
             this.bibliotecaPet.push(parametro);
             cleaerFields();
             envieMsg("Seu pet fofinho foi cadastrado!", "sucesso")
@@ -118,3 +120,9 @@ function cleaerFields() {
 function dateinPTBR(date){
     return date.split('-').reverse().join('/')
 }
+
+function isURLValida(url) {
+     if (url.match(/\.(jpeg|jpg|gif|png)$/) != null) {
+          return true; } else {  return false; 
+        }
+    }
